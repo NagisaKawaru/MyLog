@@ -12,7 +12,6 @@
 		EA235D131C4E484F00C8BEF1 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D121C4E484F00C8BEF1 /* HomePageModel.m */; };
 		EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D151C4E485D00C8BEF1 /* StoryModel.m */; };
 		EA235D191C4E487000C8BEF1 /* TopStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D181C4E487000C8BEF1 /* TopStoryModel.m */; };
-		EA235D1C1C4E4A4200C8BEF1 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D1B1C4E4A4200C8BEF1 /* ImageModel.m */; };
 		EACC666D1C4E128800A78D1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC666C1C4E128800A78D1B /* main.m */; };
 		EACC66701C4E128800A78D1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC666F1C4E128800A78D1B /* AppDelegate.m */; };
 		EACC66781C4E128800A78D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACC66771C4E128800A78D1B /* Assets.xcassets */; };
@@ -53,8 +52,6 @@
 		EA235D151C4E485D00C8BEF1 /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
 		EA235D171C4E487000C8BEF1 /* TopStoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoryModel.h; sourceTree = "<group>"; };
 		EA235D181C4E487000C8BEF1 /* TopStoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryModel.m; sourceTree = "<group>"; };
-		EA235D1A1C4E4A4200C8BEF1 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
-		EA235D1B1C4E4A4200C8BEF1 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		EACC66681C4E128800A78D1B /* MyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACC666C1C4E128800A78D1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EACC666E1C4E128800A78D1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				EA235D151C4E485D00C8BEF1 /* StoryModel.m */,
 				EA235D171C4E487000C8BEF1 /* TopStoryModel.h */,
 				EA235D181C4E487000C8BEF1 /* TopStoryModel.m */,
-				EA235D1A1C4E4A4200C8BEF1 /* ImageModel.h */,
-				EA235D1B1C4E4A4200C8BEF1 /* ImageModel.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -400,7 +395,6 @@
 				EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */,
 				EA235D101C4E36D000C8BEF1 /* HomePageCell.m in Sources */,
 				EACC66701C4E128800A78D1B /* AppDelegate.m in Sources */,
-				EA235D1C1C4E4A4200C8BEF1 /* ImageModel.m in Sources */,
 				EACC66A01C4E12B400A78D1B /* BaseViewController.m in Sources */,
 				EACC66A71C4E135C00A78D1B /* HomePageViewController.m in Sources */,
 				EACC66A31C4E12E300A78D1B /* ContainerViewController.m in Sources */,

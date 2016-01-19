@@ -35,7 +35,7 @@
 -(UIImageView*)iconImageView
 {
     if (!_iconImageView) {
-        _iconImageView=[[UIImageView alloc]initWithFrame:CGRectMake(GAP, GAP, 150, 120)];
+        _iconImageView=[[UIImageView alloc]initWithFrame:CGRectMake(GAP, GAP, 130, 130*4/5)];
         
         [self.contentView addSubview:_iconImageView];
         
@@ -50,6 +50,8 @@
         _label.font=[UIFont systemFontOfSize:18];
         _label.textColor=[UIColor blackColor];
         _label.numberOfLines=0;
+        
+        _label.autoresizingMask=UIViewAutoresizingFlexibleTopMargin;
         
         [self.contentView addSubview:_label];
         
