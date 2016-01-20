@@ -1,0 +1,11 @@
+/* 
+  MultiLanguage.strings
+  MyLog
+
+  Created by 杨利嘉 on 16/1/20.
+  Copyright © 2016年 杨利嘉. All rights reserved.
+*/
+
+"alertTitle"="警告";
+"message"="你说什么?";
+"actionTitle"="确定";
