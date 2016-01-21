@@ -7,10 +7,10 @@
 //
 
 #import <JSONModel/JSONModel.h>
-#import "StoryModel.h"
-#import "TopStoryModel.h"
+//#import "StoryModel.h"
+//#import "TopStoryModel.h"
 @interface HomePageModel : JSONModel
 @property(nonatomic,copy)NSString *date;
-@property(nonatomic,strong)NSArray <StoryModel>*stories;
-@property(nonatomic,strong)NSArray<TopStoryModel>*top_stories;
+//@property(nonatomic,strong)NSArray *<Optional>stories;
+//@property(nonatomic,strong)NSArray *<Optional>top_stories;
 @end

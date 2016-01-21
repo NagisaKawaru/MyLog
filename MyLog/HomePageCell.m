@@ -51,7 +51,7 @@
         _label.textColor=[UIColor blackColor];
         _label.numberOfLines=0;
         
-        _label.autoresizingMask=UIViewAutoresizingFlexibleTopMargin;
+//        _label.autoresizingMask=UIViewAutoresizingFlexibleTopMargin;
         
         [self.contentView addSubview:_label];
         

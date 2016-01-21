@@ -11,7 +11,7 @@
 		EA235D101C4E36D000C8BEF1 /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D0F1C4E36D000C8BEF1 /* HomePageCell.m */; };
 		EA235D131C4E484F00C8BEF1 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D121C4E484F00C8BEF1 /* HomePageModel.m */; };
 		EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D151C4E485D00C8BEF1 /* StoryModel.m */; };
-		EA235D191C4E487000C8BEF1 /* TopStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D181C4E487000C8BEF1 /* TopStoryModel.m */; };
+		EA8F68861C51085800D3CC7E /* StoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F68851C51085800D3CC7E /* StoryPageViewController.m */; };
 		EA9111631C4F1B76003B88F5 /* MultiLanguage.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9111651C4F1B76003B88F5 /* MultiLanguage.strings */; };
 		EACC666D1C4E128800A78D1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC666C1C4E128800A78D1B /* main.m */; };
 		EACC66701C4E128800A78D1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC666F1C4E128800A78D1B /* AppDelegate.m */; };
@@ -51,8 +51,8 @@
 		EA235D121C4E484F00C8BEF1 /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
 		EA235D141C4E485D00C8BEF1 /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModel.h; sourceTree = "<group>"; };
 		EA235D151C4E485D00C8BEF1 /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
-		EA235D171C4E487000C8BEF1 /* TopStoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoryModel.h; sourceTree = "<group>"; };
-		EA235D181C4E487000C8BEF1 /* TopStoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryModel.m; sourceTree = "<group>"; };
+		EA8F68841C51085800D3CC7E /* StoryPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPageViewController.h; sourceTree = "<group>"; };
+		EA8F68851C51085800D3CC7E /* StoryPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPageViewController.m; sourceTree = "<group>"; };
 		EA91115A1C4F1921003B88F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		EA9111641C4F1B76003B88F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MultiLanguage.strings"; sourceTree = "<group>"; };
 		EA9111661C4F1B78003B88F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MultiLanguage.strings; sourceTree = "<group>"; };
@@ -121,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA8F68831C51081000D3CC7E /* StoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F68841C51085800D3CC7E /* StoryPageViewController.h */,
+				EA8F68851C51085800D3CC7E /* StoryPageViewController.m */,
+			);
+			name = StoryPage;
+			sourceTree = "<group>";
+		};
 		EAC2B98E1C4E2BD700DB623C /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +141,6 @@
 				EA235D121C4E484F00C8BEF1 /* HomePageModel.m */,
 				EA235D141C4E485D00C8BEF1 /* StoryModel.h */,
 				EA235D151C4E485D00C8BEF1 /* StoryModel.m */,
-				EA235D171C4E487000C8BEF1 /* TopStoryModel.h */,
-				EA235D181C4E487000C8BEF1 /* TopStoryModel.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC2B98E1C4E2BD700DB623C /* HomePage */,
+				EA8F68831C51081000D3CC7E /* StoryPage */,
 				EACC66A41C4E12EF00A78D1B /* Base&&Root */,
 				EACC666B1C4E128800A78D1B /* Supporting Files */,
 			);
@@ -396,9 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA235D191C4E487000C8BEF1 /* TopStoryModel.m in Sources */,
 				EA235D131C4E484F00C8BEF1 /* HomePageModel.m in Sources */,
 				EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */,
+				EA8F68861C51085800D3CC7E /* StoryPageViewController.m in Sources */,
 				EA235D101C4E36D000C8BEF1 /* HomePageCell.m in Sources */,
 				EACC66701C4E128800A78D1B /* AppDelegate.m in Sources */,
 				EACC66A01C4E12B400A78D1B /* BaseViewController.m in Sources */,
