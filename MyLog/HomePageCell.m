@@ -15,6 +15,7 @@
 
 @property(nonatomic,strong)UIImageView *iconImageView;
 @property(nonatomic,strong)UILabel *label;
+@property(nonatomic,strong)UILabel *mulPicLabel;
 
 
 @end
@@ -28,6 +29,9 @@
     [self.iconImageView sd_setImageWithURL:[model.images firstObject]];
     
     self.label.text=model.title;
+    if (model.multipic) {
+        [self.iconImageView addSubview:self.mulPicLabel];
+    }
 }
 
 
@@ -58,4 +62,17 @@
     }
     return _label;
 }
+-(UILabel*)mulPicLabel
+{
+    if (!_mulPicLabel) {
+        _mulPicLabel=[[UILabel alloc]initWithFrame:CGRectMake(CGRectGetWidth(self.iconImageView.frame)-20, CGRectGetHeight(self.iconImageView.frame)-10, 20, 10)];
+        _mulPicLabel.text=@"多图";
+        _mulPicLabel.textColor=[UIColor whiteColor];
+        _mulPicLabel.backgroundColor=[UIColor redColor];
+        _mulPicLabel.font=[UIFont systemFontOfSize:8];
+        
+    }
+    return _mulPicLabel;
+}
+
 @end

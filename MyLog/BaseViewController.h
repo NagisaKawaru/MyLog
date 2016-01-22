@@ -10,4 +10,7 @@
 
 @interface BaseViewController : UIViewController
 
+-(void)addGestureRecognizer;
+
+-(void)swipped:(UISwipeGestureRecognizer*)sgr;
 @end

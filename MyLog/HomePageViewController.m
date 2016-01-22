@@ -9,10 +9,10 @@
 #import "HomePageViewController.h"
 #import "StoryPageViewController.h"
 #import "StoryModel.h"
-
+#import "TopStoryModel.h"
 #import "HomePageModel.h"
 #import "HomePageCell.h"
-
+#import "TopStoryView.h"
 #import "MJRefresh.h"
 
 #define Home_NetRequest @"http://news.at.zhihu.com/api/4/news/"
@@ -34,6 +34,8 @@
 
 
 @property(nonatomic,strong)UILabel *sectionTitleLabel;
+
+@property(nonatomic,strong)TopStoryView *headerView;
 @end
 
 @implementation HomePageViewController
@@ -75,15 +77,29 @@
 
 #pragma mark ========================数据加载========================
 
+
 -(void)loadData
+{
+    [self loadTopData];
+    [self loadDataWithString:self.urlString];
+}
+-(void)loadTopData
+{
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    [manager GET:self.urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self paraseTopStoryData:responseObject];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"----------->top 加载失败%@",error);
+    }];
+}
+-(void)loadDataWithString:(NSString*)urlStr
 {
     
     
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     
-    [manager GET:self.urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self parseMainData:responseObject];
-        
         [self doneLoadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -92,6 +108,21 @@
     }];
     
 
+}
+-(void)paraseTopStoryData:(NSDictionary*)data
+{
+    NSArray *allData=data[@"top_stories"];
+    
+    NSMutableArray *topStoryArr=[[NSMutableArray alloc]init];
+    for (NSDictionary *dict in allData) {
+        TopStoryModel *model=[[TopStoryModel alloc]initWithDictionary:dict error:nil];
+        
+        [topStoryArr addObject:model];
+    }
+
+    [self.headerView setTopStoryViewData:topStoryArr clickBack:^(TopStoryModel *model) {
+        NSLog(@"===============>");
+    }];
 }
 -(void)doneLoadData
 {
@@ -141,10 +172,10 @@
         
         self.dateString=[NSString stringWithFormat:@"before/%lu",_page--];
         
-        self.urlString=[NSString stringWithFormat:@"%@%@",Home_NetRequest,self.dateString];
+        NSString *urlStr=[NSString stringWithFormat:@"%@%@",Home_NetRequest,self.dateString];
         
         
-        [self loadData];
+        [self loadDataWithString:urlStr];
     }];
     self.tableView.mj_footer=footer;
     
@@ -174,6 +205,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     StoryPageViewController *storyVC=[[StoryPageViewController alloc]init];
+    
+    storyVC.allStoryArr=self.sectionDataSource[indexPath.section];
+    storyVC.model=self.sectionDataSource[indexPath.section][indexPath.row];
     
     [self.navigationController pushViewController:storyVC animated:YES];
     
@@ -294,7 +328,7 @@
         _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.delegate=self;
         _tableView.dataSource=self;
-        
+        _tableView.tableHeaderView=self.headerView;
         
         [self addRefreshControl];
         
@@ -325,5 +359,13 @@
         
     }
     return _dateRecordSource;
+}
+
+-(TopStoryView*)headerView
+{
+    if (!_headerView) {
+        _headerView =[[TopStoryView alloc]init];
+    }
+    return _headerView;
 }
 @end

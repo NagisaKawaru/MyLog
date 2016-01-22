@@ -21,5 +21,6 @@
 @property(nonatomic,copy)NSString *title;
 @property(nonatomic,copy)NSString *ga_prefix;
 @property(nonatomic,strong)NSArray *images;
+@property(nonatomic,copy)NSString<Optional> *multipic;
 
 @end

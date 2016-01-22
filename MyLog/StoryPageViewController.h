@@ -8,6 +8,11 @@
 
 #import "BaseViewController.h"
 
+@class StoryModel;
+
 @interface StoryPageViewController : BaseViewController
+
+@property(nonatomic,strong)NSArray *allStoryArr;
+@property(nonatomic,strong)StoryModel *model;
 
 @end
