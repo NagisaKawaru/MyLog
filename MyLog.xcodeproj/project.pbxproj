@@ -13,6 +13,7 @@
 		EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA235D151C4E485D00C8BEF1 /* StoryModel.m */; };
 		EA2F11DB1C52002C00132B79 /* TopStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2F11DA1C52002C00132B79 /* TopStoryView.m */; };
 		EA2F11DE1C520C4800132B79 /* TopStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2F11DD1C520C4800132B79 /* TopStoryModel.m */; };
+		EA41B5F91C56088E000EC059 /* StoryPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA41B5F81C56088E000EC059 /* StoryPageModel.m */; };
 		EA8F68861C51085800D3CC7E /* StoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F68851C51085800D3CC7E /* StoryPageViewController.m */; };
 		EA9111631C4F1B76003B88F5 /* MultiLanguage.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9111651C4F1B76003B88F5 /* MultiLanguage.strings */; };
 		EACC666D1C4E128800A78D1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC666C1C4E128800A78D1B /* main.m */; };
@@ -57,6 +58,8 @@
 		EA2F11DA1C52002C00132B79 /* TopStoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryView.m; sourceTree = "<group>"; };
 		EA2F11DC1C520C4800132B79 /* TopStoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoryModel.h; sourceTree = "<group>"; };
 		EA2F11DD1C520C4800132B79 /* TopStoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryModel.m; sourceTree = "<group>"; };
+		EA41B5F71C56088E000EC059 /* StoryPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPageModel.h; sourceTree = "<group>"; };
+		EA41B5F81C56088E000EC059 /* StoryPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPageModel.m; sourceTree = "<group>"; };
 		EA8F68841C51085800D3CC7E /* StoryPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPageViewController.h; sourceTree = "<group>"; };
 		EA8F68851C51085800D3CC7E /* StoryPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPageViewController.m; sourceTree = "<group>"; };
 		EA91115A1C4F1921003B88F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 			children = (
 				EA8F68841C51085800D3CC7E /* StoryPageViewController.h */,
 				EA8F68851C51085800D3CC7E /* StoryPageViewController.m */,
+				EA41B5F71C56088E000EC059 /* StoryPageModel.h */,
+				EA41B5F81C56088E000EC059 /* StoryPageModel.m */,
 			);
 			name = StoryPage;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			files = (
 				EA2F11DB1C52002C00132B79 /* TopStoryView.m in Sources */,
 				EA235D131C4E484F00C8BEF1 /* HomePageModel.m in Sources */,
+				EA41B5F91C56088E000EC059 /* StoryPageModel.m in Sources */,
 				EA235D161C4E485D00C8BEF1 /* StoryModel.m in Sources */,
 				EA8F68861C51085800D3CC7E /* StoryPageViewController.m in Sources */,
 				EA235D101C4E36D000C8BEF1 /* HomePageCell.m in Sources */,
